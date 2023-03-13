@@ -11,7 +11,7 @@ namespace E01_OOP_Calculator_Interfaces
 
 
         #region Properties
-
+        public override string[] Operations { get; set; }
         #endregion
 
         #region Constructors
@@ -30,23 +30,33 @@ namespace E01_OOP_Calculator_Interfaces
             return Math.Sqrt(num1);
         }
 
-        public new double OperatioChoosed(int choosed, double num1, double num2)
+        public override double OperatioChoosed(int choosed)
         {
+            double num1, num2;
             switch (choosed)
             {
                 case 1:
+                    num1 = ReadNumbers();
+                    num2= ReadNumbers();
                     Result = Sum(num1, num2);
                     break;
                 case 2:
+                    num1 = ReadNumbers();
+                    num2 = ReadNumbers();
                     Result = Sub(num1, num2);
                     break;
                 case 3:
+                    num1 = ReadNumbers();
+                    num2 = ReadNumbers();
                     Result = Div(num1, num2);
                     break;
                 case 4:
+                    num1 = ReadNumbers();
+                    num2 = ReadNumbers();
                     Result = Mult(num1, num2);
                     break;
                 case 5:
+                    num1 = ReadNumbers();
                     Result = SqrRt(num1);
                     break;
             }

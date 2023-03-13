@@ -13,6 +13,7 @@ namespace E01_OOP_Calculator_Interfaces
         #region Properties
         double Num1 { get; }
         double Num2 { get; }
+        double Num3 { get; }
         double Result { get; }
         string[] Operations { get; }
 

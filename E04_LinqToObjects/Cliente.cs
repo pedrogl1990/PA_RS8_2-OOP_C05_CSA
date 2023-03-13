@@ -61,11 +61,11 @@ namespace E04_LinqToObjects
                 cidades,
                 c => c.Localidade,
                 cd => cd.Localidade,
-                (c, cd) => new { Cliente = c, Pais = cd }
+                (c, cd) => new { Cliente = c, Cidades = cd }
                 ).Select (ccd => new
                 {
                     clienteNome = ccd.Cliente.Nome,
-                    clientePais = ccd.Pais.Pais
+                    clientePais = ccd.Cidades.Pais
                 });
 
             var numeroClientesLondres = clientes

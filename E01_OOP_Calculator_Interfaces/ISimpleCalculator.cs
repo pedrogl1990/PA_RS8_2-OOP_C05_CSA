@@ -10,17 +10,12 @@ namespace E01_OOP_Calculator_Interfaces
     {
 
         #region Properties
-
-        double Num3 { get; }
+        double Num3 { get; set; }
 
         #endregion
 
         #region Methods
-
         double Sum(double num1, double num2, double num3);
-
-        double OperatioChoosed(int choosed, double num1, double num2, double num3);
-
         #endregion
     }
 }

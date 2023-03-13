@@ -10,6 +10,8 @@ namespace E01_OOP_Calculator_Interfaces
     {
 
         #region Methods
+
+
         double SqrRt(double num1);
     }
 

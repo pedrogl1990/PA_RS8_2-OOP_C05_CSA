@@ -15,7 +15,7 @@ namespace E01_OOP_Calculator_Interfaces
         public double Num2 { get; set; }
         public double Result { get; set; }
 
-        public string[] Operations { get; set; }
+        public virtual string[] Operations { get; set; }
 
         #endregion
 
@@ -26,8 +26,10 @@ namespace E01_OOP_Calculator_Interfaces
             Num1 = 0;
             Num2 = 0;
             Result = 0;
-            Operations = new string[] { "Sum", "Subtraction", "Division", "Multipliply" };
+            Operations = new string[] { "Sum (2 numbers)","Sum (3 numbers)", "Subtraction", "Division", "Multipliply" };
         }
+     
+
         public Calculator(double num1, double num2, double result, string[] operations)
         {
             Num1 = num1;
@@ -101,20 +103,29 @@ namespace E01_OOP_Calculator_Interfaces
         }
 
 
-        public double OperatioChoosed(int choosed, double num1, double num2)
+        public virtual double OperatioChoosed(int choosed)
         {
+            double num1, num2;
             switch (choosed)
             {
                 case 1:
+                    num1 = ReadNumbers();
+                    num2 = ReadNumbers();
                     Result = Sum(num1, num2);
                     break;
                 case 2:
+                    num1 = ReadNumbers();
+                    num2 = ReadNumbers();
                     Result = Sub(num1, num2);
                     break;
                 case 3:
+                    num1 = ReadNumbers();
+                    num2 = ReadNumbers();
                     Result = Div(num1, num2);
                     break;
                 case 4:
+                    num1 = ReadNumbers();
+                    num2 = ReadNumbers();
                     Result = Mult(num1, num2);
                     break;
             }
